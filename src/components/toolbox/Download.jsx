@@ -46,7 +46,7 @@ const Download = ({ stageRef }) => {
 
   const handleDownload = () => {
     const dataURL = stageRef.current.toDataURL({ pixelRatio: 4 });
-    downloadURI(dataURL, 'Frameboi.png');
+    downloadURI(dataURL, 'Akatakyie.png');
   };
 
   return (

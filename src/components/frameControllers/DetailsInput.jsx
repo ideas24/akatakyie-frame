@@ -42,7 +42,7 @@ const Inputs = ({
       setHeight={setHeight}
       setWidth={setWidth}
     />
-    <CustomText
+  { /* <CustomText
       checked={checked}
       checkedGuild={checkedGuild}
       setchecked={setchecked}
@@ -68,7 +68,7 @@ const Inputs = ({
       setFontFamilyGuild={setFontFamilyGuild}
       handleAlignment={handleAlignment}
       align={align}
-    />
+    /> */}
   </div>
 );
 

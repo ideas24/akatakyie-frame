@@ -137,7 +137,7 @@ const Frame = () => {
   const [bgColor, setBgColor] = useState(null);
   const [bgColorGuild, setBgColorGuild] = useState(null);
   const [fontColor, setFontColor] = useState(null);
-  const [alignment, setAlignment] = useState(align[0]);
+  const [alignment, setAlignment] = useState(align[2]);
 
   const handleAlignment = () => {
     setAlignment(align[i + 1]);
@@ -159,8 +159,8 @@ const Frame = () => {
   return (
     <>
       <Helmet>
-        <title>Frameboi | HackNITR 4.0</title>
-        <meta name='Frameboi | HackNITR 4.0' contect='Virtual badges for HackNITR 4.0' />
+        <title>Akatakyieframe | 25th Anniversary</title>
+        <meta name='Akatakyieframe | 25th Anniversary' contect='Frame for AX Group 25th Anniversary' />
       </Helmet>
 
       <Container>

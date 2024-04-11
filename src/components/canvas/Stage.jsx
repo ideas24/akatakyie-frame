@@ -24,15 +24,15 @@ const CanvasStage = ({
   height,
 }) => {
   const groupDimensions = {
-    height: 272,
-    width: 273,
+    height: 372,
+    width: 373,
   };
   const groupHeight = groupDimensions.height;
   const aspectRatio = width / height;
   const imageRenderWidth = aspectRatio * groupDimensions.height;
   const imageRenderHeight = groupDimensions.height;
-  const imagePositionX = 38.5;
-  const imagePositionY = 38;
+  const imagePositionX = 0.5;
+  const imagePositionY = 0;
   const rect = [
     {
       x: 50,
