@@ -117,6 +117,18 @@ const SlimText = styled.span`
 const FRAMES = {
   ONE: frameData.frames.ONE,
   TWO: frameData.frames.TWO,
+  THREE: frameData.frames.THREE,
+  FOUR: frameData.frames.FOUR,
+  FIVE: frameData.frames.FIVE,
+  SIX: frameData.frames.SIX,
+  SEVEN: frameData.frames.SEVEN,
+  EIGHT: frameData.frames.EIGHT,
+  NINE: frameData.frames.NINE,
+  TEN: frameData.frames.TEN,
+  TENA: frameData.frames.TENA,
+  TENB: frameData.frames.TENB,
+  TENC: frameData.frames.TENC,
+  TEND: frameData.frames.TEND,
 };
 
 const align = ['center', 'left', 'right'];
