@@ -6,7 +6,7 @@ export default {
     web: 'https://www.opokuwareschool.edu.gh/',
   },
   frame: {
-    src: 'https://res.cloudinary.com/dy888woul/image/upload/c_scale,h_300,w_300/gzrkn1ziv3gql6kxagq3.png',
+    src: 'https://res.cloudinary.com/dy888woul/image/upload/v1712953418/owass-home.png',
     alt: 'frame',
   },
   head: 'AKATAKYIE',

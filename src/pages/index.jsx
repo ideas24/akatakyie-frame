@@ -36,7 +36,13 @@ const Heading = styled.div`
     items-center
     gap-4
     m-4
+  `}
+
+  @media (max-width: 768px) {
+    ${tw`
+      text-4xl
     `}
+  }
 `;
 const FrameImg = styled.img`
   ${tw`
