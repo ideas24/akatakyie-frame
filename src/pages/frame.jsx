@@ -115,7 +115,7 @@ const SlimText = styled.span`
 `;
 
 const FRAMES = {
-  ONE: frameData.frames.ONE,
+  ONE:  frameData.frames.ONE,
   TWO: frameData.frames.TWO,
   THREE: frameData.frames.THREE,
   FOUR: frameData.frames.FOUR,
@@ -129,6 +129,40 @@ const FRAMES = {
   TENB: frameData.frames.TENB,
   TENC: frameData.frames.TENC,
   TEND: frameData.frames.TEND,
+  TENE: frameData.frames.TENE,
+  TENF: frameData.frames.TENF,
+  TENG: frameData.frames.TENG,
+  TENH: frameData.frames.TENH,
+  TENI: frameData.frames.TENI,
+  TENJ: frameData.frames.TENJ,
+  TENK: frameData.frames.TENK,
+  TENL: frameData.frames.TENL,
+  TENM: frameData.frames.TENM,
+  TENN: frameData.frames.TENN,
+  TEN0: frameData.frames.TEN0,
+  TENP: frameData.frames.TENP,
+  TENQ: frameData.frames.TENQ,
+  TENR: frameData.frames.TENR,
+  TENS: frameData.frames.TENS,
+  TENT: frameData.frames.TENT,
+  TENU: frameData.frames.TENU,
+  TENV: frameData.frames.TENV,
+  TENW: frameData.frames.TENW,
+  TENX: frameData.frames.TENX,
+  TENY: frameData.frames.TENY,
+  TENZ: frameData.frames.TENZ,
+  TENAA: frameData.frames.TENAA,
+  TENBB: frameData.frames.TENBB,
+  TENCC: frameData.frames.TENCC,
+  TENDD: frameData.frames.TENDD,
+  TENEE: frameData.frames.TENEE,
+  TENFF: frameData.frames.TENFF,
+  TENGG: frameData.frames.TENGG,
+  TENHH: frameData.frames.TENHH,
+  TENII: frameData.frames.TENII,
+  TENJJ: frameData.frames.TENJJ,
+  TENKK: frameData.frames.TENKK,
+  TENLL: frameData.frames.TENLL,
 };
 
 const align = ['center', 'left', 'right'];
@@ -171,8 +205,8 @@ const Frame = () => {
   return (
     <>
       <Helmet>
-        <title>Akatakyieframe | 25th Anniversary</title>
-        <meta name='Akatakyieframe | 25th Anniversary' contect='Frame for AX Group 25th Anniversary' />
+        <title>Akatakyieframe | AX Group 25th Anniversary</title>
+        <meta name='Akatakyieframe | AX Group 25th Anniversary' contect='Frame for AX Group 25th Anniversary' />
       </Helmet>
 
       <Container>

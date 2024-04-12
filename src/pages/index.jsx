@@ -80,8 +80,8 @@ const SlimText = styled.span`
 const Home = () => (
   <>
     <Helmet>
-      <title>Akatakyieframe | 25th Anniversary</title>
-      <meta name='Akatakyieframe | 25th Anniversary' contect='Frame for AX Group 25th Anniversary' />
+      <title>Akatakyieframe | AX Group 25th Anniversary</title>
+      <meta name='Akatakyieframe | AX Group 25th Anniversary' contect='Frame for AX Group 25th Anniversary' />
     </Helmet>
     <Container>
       <Head />
