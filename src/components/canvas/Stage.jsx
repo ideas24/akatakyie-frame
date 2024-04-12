@@ -31,7 +31,7 @@ const CanvasStage = ({
   const aspectRatio = width / height;
   const imageRenderWidth = aspectRatio * groupDimensions.height;
   const imageRenderHeight = groupDimensions.height;
-  const imagePositionX = 0.5;
+  const imagePositionX = 0;
   const imagePositionY = 0;
   const rect = [
     {
