@@ -163,6 +163,23 @@ const FRAMES = {
   TENJJ: frameData.frames.TENJJ,
   TENKK: frameData.frames.TENKK,
   TENLL: frameData.frames.TENLL,
+  TENMM: frameData.frames.TENMM,
+  TENNN: frameData.frames.TENNN,
+  TEN00: frameData.frames.TEN00,
+  TEN01: frameData.frames.TEN01,
+  TEN02: frameData.frames.TEN02,
+  TEN03: frameData.frames.TEN03,
+  TEN04: frameData.frames.TEN04,
+  TEN05: frameData.frames.TEN05,
+  TEN06: frameData.frames.TEN06,
+  TEN07: frameData.frames.TEN07,
+  TEN08: frameData.frames.TEN08,
+  TEN09: frameData.frames.TEN09,
+  TEN10: frameData.frames.TEN10,
+  TEN11: frameData.frames.TEN11,
+  TEN12: frameData.frames.TEN12,
+  TEN13: frameData.frames.TEN13,
+  TEN14: frameData.frames.TEN14,
 };
 
 const align = ['center', 'left', 'right'];
