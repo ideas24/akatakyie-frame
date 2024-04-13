@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: https://frame.dscnitrourkela.org/sitemap/sitemap-index.xml
+Host: https://frame.dscnitrourkela.org
