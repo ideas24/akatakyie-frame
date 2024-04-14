@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 // Libraries
 import styled from 'styled-components';
@@ -52,29 +52,29 @@ const Toggle = styled.div`
 `;
 
 const FormFillup = styled.input`
-  width: 93%;
-  padding: 12px 13px;
+  width:93%;
+  padding:12px 13px;
   margin: auto;
-  margin-bottom: 10px;
+  margin-bottom:10px;
   display: inline-block;
-  border: 1px solid #666666;
-  border-radius: 4px;
+  border:1px solid #666666;
+  border-radius:4px;
   box-sizing: border-box;
   background-color: #333333;
   color: #666666;
-  font-size: 1rem;
+  font-size:1rem;
 `;
 
-const CustomText = ({ 
-  userName, 
-  guildName, 
-  setUsername, 
-  setGuildname, 
-  checked, 
+const CustomText = ({
+  userName,
+  guildName,
+  setUsername,
+  setGuildname,
+  checked,
   checkedGuild,
   handleChangeGuild,
-  handleChange, 
-  fontFamily, 
+  handleChange,
+  fontFamily,
   fontColor,
   setFontColor,
   bgColor,
@@ -87,59 +87,67 @@ const CustomText = ({
   handleAlignment,
   setFontColorGuild,
   setFontFamilyGuild,
-  fontFamilyGuild, 
+  fontFamilyGuild,
   align
- }) => (
-  <Container2>
-    <Section1>
-      <Heading1>Name</Heading1>
-      <label htmlFor='material-switch'>
-        <Toggle>
-          <Switch
-            checked={checked}
-            onChange={handleChange}
-            onColor='#666666'
-            onHandleColor='#ffffff'
-            handleDiameter={20}
-            uncheckedIcon={false}
-            checkedIcon={false}
-            height={13}
-            width={30}
-            className='react-switch'
-            id='material-switch'
-          />
-        </Toggle>
-      </label>
-    </Section1>
-    {checked && (
-      <Section2>
-        <FormFillup
-          type='text'
-          value={userName}
-          name='username'
-          placeholder='Your Name'
-          onChange={(e) => setUsername(e.target.value)}
-        />
-        <CustomButtons 
-          fontColors={fontColor}
-          setFontColors={setFontColor}
-          bgColors={bgColor}
-          setBgColors={setBgColor}
-          alignment={alignment}
-          fontFamily={fontFamily}
-          setFontFamily={setFontFamily}
-          fontlist="list-font-name"
-          handleAlignment={handleAlignment}
-          align={align}
-          FontId="custom-color-font-name"
-          bgId="custom-color-bg-name"
-        />
-        
-      </Section2>
-    )}
+ }) => {
+  const [selectedOption, setSelectedOption] = useState(userName);
+  const [initialLoad, setInitialLoad] = useState(true);
 
-    <Section1 style={{ paddingTop: '25px' }}>
-      <Heading1>Guild</Heading1>
+  const options = [
+    'I am an Okatakyie - ever reliable',
+    'I am an Okatakyie - Santisberg trained',
+    'I am an Okatakyie - I cover / protect my people',
+    'I am an Okatakyie - nothing intimidates me',
+    'I am an Okatakyie - I have a unique number for life',
+    'I am an Okatakyie - Opoku Ware ba ne me'
+  ];
+
+  const handleChangeOption = (e) => {
+    setSelectedOption(e.target.value);
+    setUsername(e.target.value);
+  };
+
+  useEffect(() => {
+    // Simulate toggle action programmatically when the component mounts
+    if (initialLoad) {
+      handleChange(true);
+      setInitialLoad(false);
+    }
+  }, [initialLoad, handleChange]);
+
+  return (
+    <Container2>
+      <Section1>
+        <Heading1>Caption</Heading1>
+        {/* Toggle button is hidden */}
+      </Section1>
+      {checked && (
+        <Section2>
+          <select value={selectedOption} onChange={handleChangeOption}>
+            {options.map((option) => (
+              <option key={option} value={option}>{option}</option>
+            ))}
+          </select>
+        { /*  <CustomButtons
+            fontColors={fontColor}
+            setFontColors={setFontColor}
+            bgColors={bgColor}
+            setBgColors={setBgColor}
+            alignment={alignment}
+            fontFamily={fontFamily}
+            setFontFamily={setFontFamily}
+            fontlist="list-font-name"
+            handleAlignment={handleAlignment}
+            align={align}
+            FontId="custom-color-font-name"
+            bgId="custom-color-bg-name"
+            style={{ display: checked ? 'block' : 'none' }}
+          /> */}
+        </Section2>
+      )}
+
+      <Section1 style={{ paddingTop: '25px' }}>
+      <Heading1>Name</Heading1>
       <label htmlFor='material-switch'>
         <Toggle>
           <Switch
@@ -168,23 +176,34 @@ const CustomText = ({
           onChange={(e) => setGuildname(e.target.value)}
         />
 
-        <CustomButtons 
-          fontColors={fontColorGuild}
-          setFontColors={setFontColorGuild}
-          bgColors={bgColorGuild}
-          setBgColors={setBgColorGuild}
-          alignment={alignment}
-          fontFamily={fontFamilyGuild}
-          setFontFamily={setFontFamilyGuild}
-          fontlist="list-font-guild"
-          handleAlignment={handleAlignment}
-          align={align}
-          FontId="custom-color-font-guild"
-          bgId="custom-color-bg-guild"
-        />
-      </Section2>
-    )}
-  </Container2>
-);
+       {/*   <CustomButtons
+            fontColors={fontColorGuild}
+            setFontColors={setFontColorGuild}
+            bgColors={bgColorGuild}
+            setBgColors={setBgColorGuild}
+            alignment={alignment}
+            fontFamily={fontFamilyGuild}
+            setFontFamily={setFontFamilyGuild}
+            fontlist="list-font-guild"
+            handleAlignment={handleAlignment}
+            align={align}
+            FontId="custom-color-font-guild"
+            bgId="custom-color-bg-guild"
+            style={{ display: checked ? 'block' : 'none' }}
+          /> */}
+        </Section2>
+      )}
+    </Container2>
+  );
+};
+
+export const options = [
+  'I am an Okatakyie - ever reliable',
+  'I am an Okatakyie - Santisberg trained',
+  'I am an Okatakyie - I cover / protect my people',
+  'I am an Okatakyie - nothing intimidates me',
+  'I am an Okatakyie - I have a unique number for life',
+  'I am an Okatakyie - Opoku Ware ba ne me'
+];
 
 export default CustomText;

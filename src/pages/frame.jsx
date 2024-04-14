@@ -15,6 +15,8 @@ import CanvasStage from '../components/canvas/Stage';
 
 // Assets
 import frameData from '../../config/frameData';
+import { options } from '../components/toolbox/InputText';
+
 
 const Container3 = styled.h1`
   ${tw`
@@ -190,8 +192,8 @@ const Frame = () => {
   const [uploadedImage, setUploadedImage] = useState();
   const [height, setHeight] = useState();
   const [width, setWidth] = useState();
-  const [userName, setUserName] = useState('Your Name');
-  const [guildName, setGuildName] = useState('Guild Name');
+  const [userName, setUserName] = useState(options[0]);
+  const [guildName, setGuildName] = useState('Year Name');
   const [checked, setchecked] = useState(false);
   const [checkedGuild, setcheckedGuild] = useState(false);
   const [fontFamily, setFontFamily] = useState(null);

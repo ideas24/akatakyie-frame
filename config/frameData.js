@@ -1,7 +1,7 @@
 /* eslint-disable max-len */
 export default {
   frames: {
-    ONE: 'https://ik.imagekit.io/t9mszy7n6/owassax/49.png',
+    ONE: 'https://res.cloudinary.com/dy888woul/image/upload/v1712993504/owassax/capframe1.png',
     TWO: 'https://ik.imagekit.io/t9mszy7n6/owassax/50.png',
     THREE: 'https://ik.imagekit.io/t9mszy7n6/owassax/1.png',
     FOUR: 'https://ik.imagekit.io/t9mszy7n6/owassax/48.png',
