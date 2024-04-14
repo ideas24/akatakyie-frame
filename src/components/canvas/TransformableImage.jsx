@@ -29,8 +29,8 @@ const TransformableImage = ({
       <Image
         image={image}
         width={imageWidth}
-        x={38.5}
-        y={38}
+        x={80}
+        y={0}
         height={imageHeight}
         onClick={onSelect}
         onTap={onSelect}

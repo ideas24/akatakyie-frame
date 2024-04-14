@@ -94,12 +94,19 @@ const CustomText = ({
   const [initialLoad, setInitialLoad] = useState(true);
 
   const options = [
-    'I am an Okatakyie - ever reliable',
+    'I am an Okatakyie - Opoku Ware ba ne me',
     'I am an Okatakyie - Santisberg trained',
     'I am an Okatakyie - I cover / protect my people',
     'I am an Okatakyie - nothing intimidates me',
     'I am an Okatakyie - I have a unique number for life',
-    'I am an Okatakyie - Opoku Ware ba ne me'
+    'I am an Okatakyie - ever reliable',
+    'Yes! We are Akatakyie',
+    'We are Akatakyie - a big family',
+    'Extɛ - (learning at late hours and dawn) is our thing', 
+    'We are Akatakyie - friends became brothers.',
+    'I am an Okatakyie - I can do jungle marching',
+    'I am an Okatakyie - Yes i Ana shark too',
+    'We are Akatakyie - of course we are Sharks too'
   ];
 
   const handleChangeOption = (e) => {
@@ -147,7 +154,7 @@ const CustomText = ({
       )}
 
       <Section1 style={{ paddingTop: '25px' }}>
-      <Heading1>Name</Heading1>
+    {/* <Heading1>Name</Heading1>
       <label htmlFor='material-switch'>
         <Toggle>
           <Switch
@@ -164,8 +171,8 @@ const CustomText = ({
             id='material-switch'
           />
         </Toggle>
-      </label>
-    </Section1>
+      </label>*/}
+    </Section1> 
     {checkedGuild && (
       <Section2 style={{ paddingBottom: '20px' }}>
         <FormFillup
@@ -198,12 +205,19 @@ const CustomText = ({
 };
 
 export const options = [
-  'I am an Okatakyie - ever reliable',
+  'I am an Okatakyie - Opoku Ware ba ne me',
   'I am an Okatakyie - Santisberg trained',
   'I am an Okatakyie - I cover / protect my people',
   'I am an Okatakyie - nothing intimidates me',
   'I am an Okatakyie - I have a unique number for life',
-  'I am an Okatakyie - Opoku Ware ba ne me'
+  'I am an Okatakyie - ever reliable',
+  'Yes! We are Akatakyie',
+  'We are Akatakyie - a big family',
+  'Extɛ - (learning at late hours and dawn) is our thing', 
+  'We are Akatakyie - friends became brothers.',
+  'I am an Okatakyie - I can do jungle marching',
+  'I am an Okatakyie - Yes i Ana shark too',
+  'We are Akatakyie - of course we are Sharks too'
 ];
 
 export default CustomText;

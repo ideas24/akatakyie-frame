@@ -37,28 +37,6 @@ const TransformableText = ({
     }
   }, [isSelected]);
 
-  useEffect(() => {
-    if (frame === 'FRAMES.ONE') {
-      shapeProps.x = 5;
-      shapeProps.y = 80;
-    } else if (frame === 'FRAMES.TWO') {
-      shapeProps.x = 20;
-      shapeProps.y = 350;
-    } else if (frame === 'FRAMES.THREE') {
-      shapeProps.x = 10;
-      shapeProps.y = 300;
-    } else if (frame === 'FRAMES.FOUR') {
-      shapeProps.x = 20;
-      shapeProps.y = 200;
-    } else if (frame === 'FRAMES.FIVE') {
-      shapeProps.x = 30;
-      shapeProps.y = 400;
-    } else if (frame === 'FRAMES.SIX') {
-      shapeProps.x = 40;
-      shapeProps.y = 100;
-    }
-  }, [frame]);
-
   return (
     <>
       <Group
@@ -68,6 +46,8 @@ const TransformableText = ({
         ref={textRef}
         // eslint-disable-next-line react/jsx-props-no-spreading
         {...shapeProps}
+        x={6}
+        y={268.5}
         draggable={false}
         onDragEnd={(e) => {
           onChange({

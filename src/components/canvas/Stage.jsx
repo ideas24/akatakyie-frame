@@ -100,7 +100,8 @@ const CanvasStage = ({
               onMouseDown={checkDeselect}
               onTouchStart={checkDeselect}
               fontStyle='bold'
-              fontSize={22}
+              fontSize={20}
+              verticalAlign="middle"
               shapeProps={rect[0]}
               isSelected={rect[0].id === selectedId}
               onSelect={() => {
