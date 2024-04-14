@@ -180,6 +180,13 @@ const FRAMES = {
   TEN12: frameData.frames.TEN12,
   TEN13: frameData.frames.TEN13,
   TEN14: frameData.frames.TEN14,
+  TEN15: frameData.frames.TEN15,
+  TEN16: frameData.frames.TEN16,
+  TEN17: frameData.frames.TEN17,
+  TEN18: frameData.frames.TEN18,
+  TEN19: frameData.frames.TEN19,
+  TEN20: frameData.frames.TEN20,
+  TEN21: frameData.frames.TEN21,
 };
 
 const align = ['center', 'left', 'right'];
