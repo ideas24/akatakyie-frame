@@ -4,6 +4,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import {Rect, Text, Group} from 'react-konva';
 import useCustomFontSize from './useCustomFontSize';
 
+
 const TransformableText = ({
   shapeProps,
   isSelected,
@@ -15,7 +16,8 @@ const TransformableText = ({
   fontStyle,
   fontColor,
   alignment,
-  fontSize
+  fontSize,
+  frame
 }) => {
   const [textWidth, setTextWidth] = useState(0);
   const textRef = useRef();
@@ -35,6 +37,28 @@ const TransformableText = ({
     }
   }, [isSelected]);
 
+  useEffect(() => {
+    if (frame === 'FRAMES.ONE') {
+      shapeProps.x = 5;
+      shapeProps.y = 80;
+    } else if (frame === 'FRAMES.TWO') {
+      shapeProps.x = 20;
+      shapeProps.y = 350;
+    } else if (frame === 'FRAMES.THREE') {
+      shapeProps.x = 10;
+      shapeProps.y = 300;
+    } else if (frame === 'FRAMES.FOUR') {
+      shapeProps.x = 20;
+      shapeProps.y = 200;
+    } else if (frame === 'FRAMES.FIVE') {
+      shapeProps.x = 30;
+      shapeProps.y = 400;
+    } else if (frame === 'FRAMES.SIX') {
+      shapeProps.x = 40;
+      shapeProps.y = 100;
+    }
+  }, [frame]);
+
   return (
     <>
       <Group
@@ -44,8 +68,6 @@ const TransformableText = ({
         ref={textRef}
         // eslint-disable-next-line react/jsx-props-no-spreading
         {...shapeProps}
-        x={6}
-        y={264.5}
         draggable={false}
         onDragEnd={(e) => {
           onChange({
@@ -60,7 +82,7 @@ const TransformableText = ({
             const textBounds = textNode.getClientRect();
             const newFontSize = Math.max(1, Math.min(280 / textBounds.width,55 / textBounds.height) * customFontSize);
             textNode.fontSize(newFontSize);
-            textNode.y(30 - (newFontSize / 2));
+            textNode.y(30 - (newFontSize /2));
             const node = textRef.current;
             onChange({
               ...shapeProps,
@@ -93,4 +115,3 @@ const TransformableText = ({
 };
 
 export default TransformableText;
-
