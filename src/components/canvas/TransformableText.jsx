@@ -71,10 +71,10 @@ const TransformableText = ({
         }}
       >
         <Rect
-          width={289}
-          height={60}
-          fill={'#343F60'}
-          cornerRadius={[0,0,0,0]}
+        width={shapeProps.width} // Set width from shapeProps
+        height={shapeProps.height} // Set height from shapeProps
+        fill={'#343F60'}
+        cornerRadius={[0,0,0,0]}
         />
         <Text
           width={280}

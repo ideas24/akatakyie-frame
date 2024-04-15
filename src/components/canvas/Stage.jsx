@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 /// Components
-import { Stage, Layer, Image, Group } from 'react-konva';
+import { Stage, Layer, Image, Group, Rect } from 'react-konva';
 import TransformableText from './TransformableText';
 import TransformableImage from './TransformableImage';
 
@@ -23,6 +23,8 @@ const CanvasStage = ({
   width,
   height,
   textPositions, // New prop for text positions
+  rectWidth, // New prop for Rect width
+  rectHeight, // New prop for Rect height
 }) => {
   const groupDimensions = {
     height: 372,
@@ -106,7 +108,9 @@ const CanvasStage = ({
               shapeProps={{
                 ...rect[0], 
                 x: textPositions[0]?.textPositionX || 6, // Use the text position from props or fallback to default
-                y: textPositions[0]?.textPositionY || 268.5
+                y: textPositions[0]?.textPositionY || 268.5,
+                width: rectWidth, // Set the width
+                height: rectHeight, // Set the height
               }}
               isSelected={rect[0].id === selectedId}
               onSelect={() => {

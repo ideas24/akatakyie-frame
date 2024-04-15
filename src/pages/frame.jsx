@@ -146,6 +146,9 @@ const Frame = () => {
     { textPositionX: 6, textPositionY: 268.5 }, // Default values
     { textPositionX: 10, textPositionY: 300 }, // Values for frame TWO
   ]);
+  const [rectWidth, setRectWidth] = useState(289); // Default rect width
+  const [rectHeight, setRectHeight] = useState(60); // Default rect height
+
   const handleAlignment = () => {
     setAlignment(align[i + 1]);
     // eslint-disable-next-line no-const-assign
@@ -168,15 +171,28 @@ const Frame = () => {
       switch (selectedFrame) {
         case FRAMES.ONE:
           setTextPositions([{ textPositionX: 6, textPositionY: 268.5 }]);
+          setRectWidth(289);
+          setRectHeight(60);
           break;
         case FRAMES.TWO:
           setTextPositions([{ textPositionX: 6, textPositionY: 268.5 }]);
+          setRectWidth(289);
+          setRectHeight(60);
           break;
         case FRAMES.THREE:
-          setTextPositions([{ textPositionX: 10, textPositionY: 267.5 }]);
+          setTextPositions([{ textPositionX: 16, textPositionY: 267.5 }]);
+          setRectWidth(490);
+          setRectHeight(90);
+          break;
+        case FRAMES.FOUR:
+            setTextPositions([{ textPositionX: 16, textPositionY: 267.5 }]);
+            setRectWidth(490);
+            setRectHeight(90);
           break;
         default:
-          setTextPositions([{ textPositionX: 10, textPositionY: 267.5 }]);
+          setTextPositions([{ textPositionX: 10, textPositionY: 267.5 }])
+          setRectWidth(490);
+          setRectHeight(90);;
           break;
       }
     }, [selectedFrame]);
@@ -210,6 +226,8 @@ const Frame = () => {
                 height={height}
                 width={width}
                 textPositions={textPositions}
+                rectWidth={rectWidth} // Pass rect width
+                rectHeight={rectHeight} // Pass rect height
               />
             )}
             <CarouselC>
