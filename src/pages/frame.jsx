@@ -125,6 +125,8 @@ const FRAMES = {
   SIX: frameData.frames.SIX,
   SEVEN: frameData.frames.SEVEN,
   EIGHT: frameData.frames.EIGHT,
+  NINE: frameData.frames.NINE,
+  TEN: frameData.frames.TEN,
 };
 
 const align = ['center', 'left', 'right'];
@@ -213,10 +215,20 @@ const Frame = () => {
             setRectWidth(289);
             setRectHeight(60);
           break;
+        case FRAMES.NINE:
+            setTextPositions([{ textPositionX: 0.2, textPositionY: 219.5 }]);
+            setRectWidth(350);
+            setRectHeight(51);
+          break;
+        case FRAMES.TEN:
+            setTextPositions([{ textPositionX: 0.2, textPositionY: 219.5  }]);
+            setRectWidth(350);
+            setRectHeight(51);
+          break;
         default:
-          setTextPositions([{ textPositionX: 10, textPositionY: 267.5 }])
-          setRectWidth(490);
-          setRectHeight(90);;
+          setTextPositions([{ textPositionX: 6, textPositionY: 256.5 }])
+          setRectWidth(289);
+          setRectHeight(60);;
           break;
       }
     }, [selectedFrame]);

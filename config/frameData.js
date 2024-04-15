@@ -9,5 +9,7 @@ export default {
     SIX: 'https://ik.imagekit.io/t9mszy7n6/owassax/capfreeorig6cc.png',
     SEVEN: 'https://ik.imagekit.io/t9mszy7n6/owassax/capfreeorig7bb.png',
     EIGHT: 'https://ik.imagekit.io/t9mszy7n6/owassax/capfreeorig8bb.png',
+    NINE: 'https://ik.imagekit.io/t9mszy7n6/owassax/capfreeorig9c.png',
+    TEN: 'https://ik.imagekit.io/t9mszy7n6/owassax/capfreeorig10.png',
   },
 };
