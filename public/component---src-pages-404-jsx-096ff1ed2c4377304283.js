@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkframeboi=self.webpackChunkframeboi||[]).push([[415],{7684:function(e,r,a){a.r(r);var n=a(6540);r.default=()=>n.createElement("div",null,"Error 404: Page not found")}}]);
+//# sourceMappingURL=component---src-pages-404-jsx-096ff1ed2c4377304283.js.map

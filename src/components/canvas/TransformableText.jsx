@@ -70,16 +70,18 @@ const TransformableText = ({
           }
         }}
       >
+        
         <Rect
         width={shapeProps.width} // Set width from shapeProps
         height={shapeProps.height} // Set height from shapeProps
-        fill={'#343F60'}
+        fill={'#313C5F'}
         cornerRadius={[0,0,0,0]}
         />
         <Text
-          width={280}
+          width={shapeProps.width}
+          height={shapeProps.height}
           align="center"
-          verticalAlign="middle"
+          verticalAlign="middle" // Center vertically
           text={name}
           fill={fontColor || "white"}
           fontSize={customFontSize}

@@ -121,6 +121,10 @@ const FRAMES = {
   TWO: frameData.frames.TWO,
   THREE: frameData.frames.THREE,
   FOUR: frameData.frames.FOUR,
+  FIVE: frameData.frames.FIVE,
+  SIX: frameData.frames.SIX,
+  SEVEN: frameData.frames.SEVEN,
+  EIGHT: frameData.frames.EIGHT,
 };
 
 const align = ['center', 'left', 'right'];
@@ -170,24 +174,44 @@ const Frame = () => {
     useEffect(() => {
       switch (selectedFrame) {
         case FRAMES.ONE:
-          setTextPositions([{ textPositionX: 6, textPositionY: 268.5 }]);
+          setTextPositions([{ textPositionX: 6, textPositionY: 256.5 }]);
           setRectWidth(289);
           setRectHeight(60);
           break;
         case FRAMES.TWO:
-          setTextPositions([{ textPositionX: 6, textPositionY: 268.5 }]);
+          setTextPositions([{ textPositionX: 6, textPositionY: 256.5 }]);
           setRectWidth(289);
           setRectHeight(60);
           break;
         case FRAMES.THREE:
-          setTextPositions([{ textPositionX: 16, textPositionY: 267.5 }]);
-          setRectWidth(490);
-          setRectHeight(90);
+          setTextPositions([{ textPositionX: 6, textPositionY: 256.5 }]);
+          setRectWidth(345);
+          setRectHeight(60);
           break;
         case FRAMES.FOUR:
-            setTextPositions([{ textPositionX: 16, textPositionY: 267.5 }]);
-            setRectWidth(490);
-            setRectHeight(90);
+            setTextPositions([{ textPositionX: 6, textPositionY: 256.5 }]);
+            setRectWidth(345);
+            setRectHeight(60);
+          break;
+        case FRAMES.FIVE:
+            setTextPositions([{ textPositionX: 6, textPositionY: 256.5 }]);
+            setRectWidth(300);
+            setRectHeight(60);
+          break;
+        case FRAMES.SIX:
+            setTextPositions([{ textPositionX: 6, textPositionY: 256.5 }]);
+            setRectWidth(300);
+            setRectHeight(60);
+          break;
+        case FRAMES.SEVEN:
+            setTextPositions([{ textPositionX: 6, textPositionY: 256.5 }]);
+            setRectWidth(289);
+            setRectHeight(60);
+          break;
+        case FRAMES.EIGHT:
+            setTextPositions([{ textPositionX: 6, textPositionY: 256.5 }]);
+            setRectWidth(289);
+            setRectHeight(60);
           break;
         default:
           setTextPositions([{ textPositionX: 10, textPositionY: 267.5 }])
