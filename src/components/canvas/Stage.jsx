@@ -22,6 +22,7 @@ const CanvasStage = ({
   alignment,
   width,
   height,
+  textPositions, // New prop for text positions
 }) => {
   const groupDimensions = {
     height: 372,
@@ -33,8 +34,6 @@ const CanvasStage = ({
   const imageRenderHeight = groupDimensions.height;
   const imagePositionX = 0;
   const imagePositionY = 0;
-  const textPositionX = 6; // New text X position
-  const textPositionY = 268.5; // New text Y position
   const rect = [
     {
       x: 50,
@@ -106,8 +105,8 @@ const CanvasStage = ({
               verticalAlign="middle"
               shapeProps={{
                 ...rect[0], 
-                x: textPositionX, 
-                y: textPositionY 
+                x: textPositions[0]?.textPositionX || 6, // Use the text position from props or fallback to default
+                y: textPositions[0]?.textPositionY || 268.5
               }}
               isSelected={rect[0].id === selectedId}
               onSelect={() => {

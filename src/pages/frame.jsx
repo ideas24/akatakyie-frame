@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 
 // Libraries
 import useImage from 'use-image';
@@ -119,6 +119,8 @@ const SlimText = styled.span`
 const FRAMES = {
   ONE:  frameData.frames.ONE,
   TWO: frameData.frames.TWO,
+  THREE: frameData.frames.THREE,
+  FOUR: frameData.frames.FOUR,
 };
 
 const align = ['center', 'left', 'right'];
@@ -140,7 +142,10 @@ const Frame = () => {
   const [bgColorGuild, setBgColorGuild] = useState(null);
   const [fontColor, setFontColor] = useState(null);
   const [alignment, setAlignment] = useState(align[2]);
-
+  const [textPositions, setTextPositions] = useState([
+    { textPositionX: 6, textPositionY: 268.5 }, // Default values
+    { textPositionX: 10, textPositionY: 300 }, // Values for frame TWO
+  ]);
   const handleAlignment = () => {
     setAlignment(align[i + 1]);
     // eslint-disable-next-line no-const-assign
@@ -157,6 +162,24 @@ const Frame = () => {
   const stageRef = useRef(null);
   const [frameImg] = useImage(selectedFrame, 'Anonymous');
   const [image] = useImage(uploadedImage, 'Anonymous');
+
+    // Update text positions based on selected frame
+    useEffect(() => {
+      switch (selectedFrame) {
+        case FRAMES.ONE:
+          setTextPositions([{ textPositionX: 6, textPositionY: 268.5 }]);
+          break;
+        case FRAMES.TWO:
+          setTextPositions([{ textPositionX: 6, textPositionY: 268.5 }]);
+          break;
+        case FRAMES.THREE:
+          setTextPositions([{ textPositionX: 10, textPositionY: 267.5 }]);
+          break;
+        default:
+          setTextPositions([{ textPositionX: 10, textPositionY: 267.5 }]);
+          break;
+      }
+    }, [selectedFrame]);
 
   return (
     <>
@@ -186,6 +209,7 @@ const Frame = () => {
                 fontFamilyGuild={fontFamilyGuild}
                 height={height}
                 width={width}
+                textPositions={textPositions}
               />
             )}
             <CarouselC>
