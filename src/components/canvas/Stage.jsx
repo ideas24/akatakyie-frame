@@ -33,6 +33,8 @@ const CanvasStage = ({
   const imageRenderHeight = groupDimensions.height;
   const imagePositionX = 0;
   const imagePositionY = 0;
+  const textPositionX = 6; // New text X position
+  const textPositionY = 268.5; // New text Y position
   const rect = [
     {
       x: 50,
@@ -102,7 +104,11 @@ const CanvasStage = ({
               fontStyle='bold'
               fontSize={20}
               verticalAlign="middle"
-              shapeProps={rect[0]}
+              shapeProps={{
+                ...rect[0], 
+                x: textPositionX, 
+                y: textPositionY 
+              }}
               isSelected={rect[0].id === selectedId}
               onSelect={() => {
                 selectShape(rect[0].id);

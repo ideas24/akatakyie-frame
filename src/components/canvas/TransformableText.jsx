@@ -46,8 +46,6 @@ const TransformableText = ({
         ref={textRef}
         // eslint-disable-next-line react/jsx-props-no-spreading
         {...shapeProps}
-        x={6}
-        y={268.5}
         draggable={false}
         onDragEnd={(e) => {
           onChange({
