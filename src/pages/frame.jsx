@@ -127,6 +127,7 @@ const FRAMES = {
   EIGHT: frameData.frames.EIGHT,
   NINE: frameData.frames.NINE,
   TEN: frameData.frames.TEN,
+  ELEVEN: frameData.frames.ELEVEN,
 };
 
 const align = ['center', 'left', 'right'];
@@ -152,6 +153,7 @@ const Frame = () => {
     { textPositionX: 6, textPositionY: 268.5 }, // Default values
     { textPositionX: 10, textPositionY: 300 }, // Values for frame TWO
   ]);
+  const [defaultImageDimensions, setDefaultImageDimensions] = useState({ width: 350, height: 350 }); // Default dimensions
   const [rectWidth, setRectWidth] = useState(289); // Default rect width
   const [rectHeight, setRectHeight] = useState(60); // Default rect height
 
@@ -225,6 +227,12 @@ const Frame = () => {
             setRectWidth(350);
             setRectHeight(51);
           break;
+        case FRAMES.ELEVEN:
+            setTextPositions([{ textPositionX: 0.2, textPositionY: 219.5  }]);
+            setRectWidth(350);
+            setRectHeight(51);
+            setDefaultImageDimensions({ width: 130, height: 130 });
+          break;
         default:
           setTextPositions([{ textPositionX: 6, textPositionY: 256.5 }])
           setRectWidth(289);
@@ -264,6 +272,7 @@ const Frame = () => {
                 textPositions={textPositions}
                 rectWidth={rectWidth} // Pass rect width
                 rectHeight={rectHeight} // Pass rect height
+                defaultImageDimensions={defaultImageDimensions}
               />
             )}
             <CarouselC>

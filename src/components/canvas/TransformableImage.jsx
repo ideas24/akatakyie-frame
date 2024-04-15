@@ -8,6 +8,8 @@ const TransformableImage = ({
   isSelected,
   onSelect,
   onChange,
+  defaultImageWidth, // Updated prop name
+  defaultImageHeight, // Updated prop name
   imageWidth,
   imageHeight,
   image,
@@ -28,10 +30,10 @@ const TransformableImage = ({
     <>
       <Image
         image={image}
-        width={imageWidth}
+        width={defaultImageWidth}
         x={80}
         y={0}
-        height={imageHeight}
+        height={defaultImageHeight}
         onClick={onSelect}
         onTap={onSelect}
         onMouseDown={onMouseDown}

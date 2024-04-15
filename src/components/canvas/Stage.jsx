@@ -25,6 +25,7 @@ const CanvasStage = ({
   textPositions, // New prop for text positions
   rectWidth, // New prop for Rect width
   rectHeight, // New prop for Rect height
+  defaultImageDimensions, // New prop for default image dimensions
 }) => {
   const groupDimensions = {
     height: 372,
@@ -78,8 +79,8 @@ const CanvasStage = ({
         >
           <TransformableImage
             image={image}
-            imageWidth={imageRenderWidth}
-            imageHeight={imageRenderHeight}
+            defaultImageWidth={defaultImageDimensions?.width ||imageRenderWidth}
+            defaultImageHeight={defaultImageDimensions?.height ||imageRenderHeight}
             onMouseDown={checkDeselect}
             onTouchStart={checkDeselect}
             isSelected={renderImg[0].id === selectedId1}
