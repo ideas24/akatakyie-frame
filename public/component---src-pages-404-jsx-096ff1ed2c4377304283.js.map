@@ -1,0 +1,1 @@
+{"version":3,"file":"component---src-pages-404-jsx-096ff1ed2c4377304283.js","mappings":"8HAIA,UAFcA,IAAMC,EAAAA,cAAA,WAAK,4B","sources":["webpack://frameboi/./src/pages/404.jsx"],"sourcesContent":["import React from 'react';\n\nconst Error = () => <div>Error 404: Page not found</div>;\n\nexport default Error;\n"],"names":["Error","React"],"sourceRoot":""}
