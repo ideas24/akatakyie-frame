@@ -133,14 +133,14 @@ const CanvasStage = ({
             <TransformableText
               // eslint-disable-next-line react/no-array-index-key
               name={guildName}
-              colour={bgColorGuild}
+              colour='#ffffff'
               fontFamily={fontFamilyGuild}
               alignment={alignment}
               fontColor={fontColorGuild}
               onMouseDown={checkDeselect}
               onTouchStart={checkDeselect}
               fontStyle='normal'
-              fontSize={22}
+              fontSize={8}
               shapeProps={rect[1]}
               isSelected={rect[1].id === selectedId}
               onSelect={() => {
