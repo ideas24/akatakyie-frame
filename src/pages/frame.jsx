@@ -128,7 +128,6 @@ const FRAMES = {
   NINE: frameData.frames.NINE,
   TEN: frameData.frames.TEN,
   ELEVEN: frameData.frames.ELEVEN,
-  TWELVE: frameData.frames.TWELVE,
   
 };
 
@@ -313,18 +312,6 @@ const Frame = () => {
             setFrameWidth(350);
           break;
         case FRAMES.ELEVEN:
-            setTextPositions([{ textPositionX: 0.2, textPositionY: 219.5  }]);
-            setImagePositions([{ imagePositionsX: 220, imagePositionsY: 186 }]);
-            setRectWidth(0.5);
-            setRectHeight(0.5);
-            setDefaultImageDimensions({ width: 130, height: 130 });
-            setRectSchoolWidth(60);
-            setRectSchoolHeight(20);
-            setTextSchoolPositions([{ textSchoolPositionX: 2, textSchoolPositionY: 19.8 }]);
-            setFrameHeight(350);
-            setFrameWidth(350);
-          break;
-        case FRAMES.TWELVE:
             setTextPositions([{ textPositionX: 0.2, textPositionY: 219.5  }]);
             setImagePositions([{ imagePositionsX: 220, imagePositionsY: 186 }]);
             setRectWidth(0.5);
