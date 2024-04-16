@@ -23,6 +23,7 @@ const CanvasStage = ({
   width,
   height,
   textPositions, // New prop for text positions
+  imagePositions,
   rectWidth, // New prop for Rect width
   rectHeight, // New prop for Rect height
   defaultImageDimensions, // New prop for default image dimensions
@@ -83,6 +84,10 @@ const CanvasStage = ({
             defaultImageHeight={defaultImageDimensions?.height ||imageRenderHeight}
             onMouseDown={checkDeselect}
             onTouchStart={checkDeselect}
+            shapeProps={{
+              x: imagePositions[0]?.imagePositionsX || 80,
+              y: imagePositions[0]?.imagePositionsY || 0,
+            }}
             isSelected={renderImg[0].id === selectedId1}
             onSelect={() => {
               selectShape1(renderImg[0].id);

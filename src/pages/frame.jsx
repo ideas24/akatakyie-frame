@@ -155,6 +155,10 @@ const Frame = () => {
     { textPositionX: 6, textPositionY: 268.5 }, // Default values
     { textPositionX: 10, textPositionY: 300 }, // Values for frame TWO
   ]);
+  const [imagePositions, setImagePositions] = useState([
+    { imagePositionsX: 80, imagePositionsY: 0 }, // Default values
+    { imagePositionsX: 80, imagePositionsY: 0 }, // Values for frame TWO
+  ]);
   const [defaultImageDimensions, setDefaultImageDimensions] = useState({ width: 350, height: 350 }); // Default dimensions
   const [rectWidth, setRectWidth] = useState(289); // Default rect width
   const [rectHeight, setRectHeight] = useState(60); // Default rect height
@@ -181,62 +185,84 @@ const Frame = () => {
       switch (selectedFrame) {
         case FRAMES.ONE:
           setTextPositions([{ textPositionX: 6, textPositionY: 256.5 }]);
+          setImagePositions([{ imagePositionsX: 80, imagePositionsY: 0 }]);
           setRectWidth(289);
           setRectHeight(60);
+          setDefaultImageDimensions({ width: 350, height: 350 });
           break;
         case FRAMES.TWO:
           setTextPositions([{ textPositionX: 6, textPositionY: 256.5 }]);
+          setImagePositions([{ imagePositionsX: 80, imagePositionsY: 0 }]);
           setRectWidth(289);
           setRectHeight(60);
+          setDefaultImageDimensions({ width: 350, height: 350 });
           break;
         case FRAMES.THREE:
           setTextPositions([{ textPositionX: 6, textPositionY: 256.5 }]);
+          setImagePositions([{ imagePositionsX: 80, imagePositionsY: 0 }]);
           setRectWidth(345);
           setRectHeight(60);
+          setDefaultImageDimensions({ width: 350, height: 350 });
           break;
         case FRAMES.FOUR:
             setTextPositions([{ textPositionX: 6, textPositionY: 256.5 }]);
+            setImagePositions([{ imagePositionsX: 80, imagePositionsY: 0 }]);
             setRectWidth(345);
             setRectHeight(60);
+            setDefaultImageDimensions({ width: 350, height: 350 });
           break;
         case FRAMES.FIVE:
             setTextPositions([{ textPositionX: 6, textPositionY: 256.5 }]);
+            setImagePositions([{ imagePositionsX: 80, imagePositionsY: 0 }]);
             setRectWidth(300);
             setRectHeight(60);
+            setDefaultImageDimensions({ width: 350, height: 350 });
           break;
         case FRAMES.SIX:
             setTextPositions([{ textPositionX: 6, textPositionY: 256.5 }]);
+            setImagePositions([{ imagePositionsX: 80, imagePositionsY: 0 }]);
             setRectWidth(300);
             setRectHeight(60);
+            setDefaultImageDimensions({ width: 350, height: 350 });
           break;
         case FRAMES.SEVEN:
             setTextPositions([{ textPositionX: 6, textPositionY: 256.5 }]);
+            setImagePositions([{ imagePositionsX: 80, imagePositionsY: 0 }]);
             setRectWidth(289);
             setRectHeight(60);
+            setDefaultImageDimensions({ width: 350, height: 350 });
           break;
         case FRAMES.EIGHT:
             setTextPositions([{ textPositionX: 6, textPositionY: 256.5 }]);
+            setImagePositions([{ imagePositionsX: 80, imagePositionsY: 0 }]);
             setRectWidth(289);
             setRectHeight(60);
+            setDefaultImageDimensions({ width: 350, height: 350 });
           break;
         case FRAMES.NINE:
             setTextPositions([{ textPositionX: 0.2, textPositionY: 219.5 }]);
+            setImagePositions([{ imagePositionsX: 80, imagePositionsY: 0 }]);
             setRectWidth(350);
             setRectHeight(51);
+            setDefaultImageDimensions({ width: 350, height: 350 });
           break;
         case FRAMES.TEN:
             setTextPositions([{ textPositionX: 0.2, textPositionY: 219.5  }]);
+            setImagePositions([{ imagePositionsX: 80, imagePositionsY: 0 }]);
             setRectWidth(350);
             setRectHeight(51);
+            setDefaultImageDimensions({ width: 350, height: 350 });
           break;
         case FRAMES.ELEVEN:
             setTextPositions([{ textPositionX: 0.2, textPositionY: 219.5  }]);
+            setImagePositions([{ imagePositionsX: 220, imagePositionsY: 186 }]);
             setRectWidth(0.5);
             setRectHeight(0.5);
             setDefaultImageDimensions({ width: 130, height: 130 });
           break;
         case FRAMES.TWELVE:
             setTextPositions([{ textPositionX: 0.2, textPositionY: 219.5  }]);
+            setImagePositions([{ imagePositionsX: 220, imagePositionsY: 186 }]);
             setRectWidth(0.5);
             setRectHeight(0.5);
             setDefaultImageDimensions({ width: 130, height: 130 });
@@ -281,6 +307,8 @@ const Frame = () => {
                 rectWidth={rectWidth} // Pass rect width
                 rectHeight={rectHeight} // Pass rect height
                 defaultImageDimensions={defaultImageDimensions}
+                imagePositions={imagePositions}
+              
               />
             )}
             <CarouselC>
