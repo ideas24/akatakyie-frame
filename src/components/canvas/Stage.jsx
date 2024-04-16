@@ -27,6 +27,9 @@ const CanvasStage = ({
   rectWidth, // New prop for Rect width
   rectHeight, // New prop for Rect height
   defaultImageDimensions, // New prop for default image dimensions
+  rectSchoolWidth,
+  rectSchoolHeight,
+  textSchoolPositions,
 }) => {
   const groupDimensions = {
     height: 372,
@@ -133,15 +136,21 @@ const CanvasStage = ({
             <TransformableText
               // eslint-disable-next-line react/no-array-index-key
               name={guildName}
-              colour='#ffffff'
+              colour='#F1A80F'
               fontFamily={fontFamilyGuild}
               alignment={alignment}
-              fontColor={fontColorGuild}
+              fontColor='#F1A80F'
               onMouseDown={checkDeselect}
               onTouchStart={checkDeselect}
-              fontStyle='normal'
-              fontSize={8}
-              shapeProps={rect[1]}
+              fontStyle='bold'
+              fontSize={12}
+              shapeProps={{
+              ...rect[1],
+              x: textSchoolPositions[1]?.textSchoolPositionX || 0.5, // Use the text position from props or fallback to default
+              y: textSchoolPositions[1]?.textSchoolPositionY || 0.5, 
+              width: rectSchoolWidth, // Set the width
+              height: rectSchoolHeight, // Set the height
+            }}
               isSelected={rect[1].id === selectedId}
               onSelect={() => {
                 selectShape(rect[1].id);

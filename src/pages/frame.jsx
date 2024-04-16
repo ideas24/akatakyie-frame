@@ -141,7 +141,7 @@ const Frame = () => {
   const [height, setHeight] = useState();
   const [width, setWidth] = useState();
   const [userName, setUserName] = useState(options[0]);
-  const [guildName, setGuildName] = useState('Year Name');
+  const [guildName, setGuildName] = useState('Name');
   const [checked, setchecked] = useState(false);
   const [checkedGuild, setcheckedGuild] = useState(false);
   const [fontFamily, setFontFamily] = useState(null);
@@ -155,6 +155,10 @@ const Frame = () => {
     { textPositionX: 6, textPositionY: 268.5 }, // Default values
     { textPositionX: 10, textPositionY: 300 }, // Values for frame TWO
   ]);
+  const [textSchoolPositions, setTextSchoolPositions] = useState([
+    { textSchoolPositionX: 0.5, textSchoolPositionY: 0.5 }, // Default values
+    { textSchoolPositionX: 0.5, textSchoolPositionY: 0.5 }, // Values for frame TWO
+  ]);
   const [imagePositions, setImagePositions] = useState([
     { imagePositionsX: 80, imagePositionsY: 0 }, // Default values
     { imagePositionsX: 80, imagePositionsY: 0 }, // Values for frame TWO
@@ -162,6 +166,8 @@ const Frame = () => {
   const [defaultImageDimensions, setDefaultImageDimensions] = useState({ width: 350, height: 350 }); // Default dimensions
   const [rectWidth, setRectWidth] = useState(289); // Default rect width
   const [rectHeight, setRectHeight] = useState(60); // Default rect height
+  const [rectSchoolWidth, setRectSchoolWidth] = useState(0.5); // Default rect width
+  const [rectSchoolHeight, setRectSchoolHeight] = useState(0.5); // Default rect height
 
   const handleAlignment = () => {
     setAlignment(align[i + 1]);
@@ -185,9 +191,12 @@ const Frame = () => {
       switch (selectedFrame) {
         case FRAMES.ONE:
           setTextPositions([{ textPositionX: 6, textPositionY: 256.5 }]);
+          setTextSchoolPositions([{ textSchoolPositionX: 0.5, textSchoolPositionY: 0.5 }]);
           setImagePositions([{ imagePositionsX: 80, imagePositionsY: 0 }]);
           setRectWidth(289);
           setRectHeight(60);
+          setRectSchoolWidth(0.5);
+          setRectSchoolHeight(0.5);
           setDefaultImageDimensions({ width: 350, height: 350 });
           break;
         case FRAMES.TWO:
@@ -196,6 +205,9 @@ const Frame = () => {
           setRectWidth(289);
           setRectHeight(60);
           setDefaultImageDimensions({ width: 350, height: 350 });
+          setRectSchoolWidth(0.5);
+          setRectSchoolHeight(0.5);
+          setTextSchoolPositions([{ textSchoolPositionX: 0.5, textSchoolPositionY: 0.5 }]);
           break;
         case FRAMES.THREE:
           setTextPositions([{ textPositionX: 6, textPositionY: 256.5 }]);
@@ -203,6 +215,9 @@ const Frame = () => {
           setRectWidth(345);
           setRectHeight(60);
           setDefaultImageDimensions({ width: 350, height: 350 });
+          setRectSchoolWidth(0.5);
+          setRectSchoolHeight(0.5);
+          setTextSchoolPositions([{ textSchoolPositionX: 0.5, textSchoolPositionY: 0.5 }]);
           break;
         case FRAMES.FOUR:
             setTextPositions([{ textPositionX: 6, textPositionY: 256.5 }]);
@@ -210,6 +225,9 @@ const Frame = () => {
             setRectWidth(345);
             setRectHeight(60);
             setDefaultImageDimensions({ width: 350, height: 350 });
+            setRectSchoolWidth(0.5);
+            setRectSchoolHeight(0.5);
+            setTextSchoolPositions([{ textSchoolPositionX: 0.5, textSchoolPositionY: 0.5 }]);
           break;
         case FRAMES.FIVE:
             setTextPositions([{ textPositionX: 6, textPositionY: 256.5 }]);
@@ -217,6 +235,9 @@ const Frame = () => {
             setRectWidth(300);
             setRectHeight(60);
             setDefaultImageDimensions({ width: 350, height: 350 });
+            setRectSchoolWidth(0.5);
+            setRectSchoolHeight(0.5);
+            setTextSchoolPositions([{ textSchoolPositionX: 0.5, textSchoolPositionY: 0.5 }]);
           break;
         case FRAMES.SIX:
             setTextPositions([{ textPositionX: 6, textPositionY: 256.5 }]);
@@ -224,6 +245,9 @@ const Frame = () => {
             setRectWidth(300);
             setRectHeight(60);
             setDefaultImageDimensions({ width: 350, height: 350 });
+            setRectSchoolWidth(0.5);
+            setRectSchoolHeight(0.5);
+            setTextSchoolPositions([{ textSchoolPositionX: 0.5, textSchoolPositionY: 0.5 }]);
           break;
         case FRAMES.SEVEN:
             setTextPositions([{ textPositionX: 6, textPositionY: 256.5 }]);
@@ -231,6 +255,9 @@ const Frame = () => {
             setRectWidth(289);
             setRectHeight(60);
             setDefaultImageDimensions({ width: 350, height: 350 });
+            setRectSchoolWidth(0.5);
+            setRectSchoolHeight(0.5);
+            setTextSchoolPositions([{ textSchoolPositionX: 0.5, textSchoolPositionY: 0.5 }]);
           break;
         case FRAMES.EIGHT:
             setTextPositions([{ textPositionX: 6, textPositionY: 256.5 }]);
@@ -238,6 +265,9 @@ const Frame = () => {
             setRectWidth(289);
             setRectHeight(60);
             setDefaultImageDimensions({ width: 350, height: 350 });
+            setRectSchoolWidth(0.5);
+            setRectSchoolHeight(0.5);
+            setTextSchoolPositions([{ textSchoolPositionX: 0.5, textSchoolPositionY: 0.5 }]);
           break;
         case FRAMES.NINE:
             setTextPositions([{ textPositionX: 0.2, textPositionY: 219.5 }]);
@@ -245,6 +275,9 @@ const Frame = () => {
             setRectWidth(350);
             setRectHeight(51);
             setDefaultImageDimensions({ width: 350, height: 350 });
+            setRectSchoolWidth(0.5);
+            setRectSchoolHeight(0.5);
+            setTextSchoolPositions([{ textSchoolPositionX: 0.5, textSchoolPositionY: 0.5 }]);
           break;
         case FRAMES.TEN:
             setTextPositions([{ textPositionX: 0.2, textPositionY: 219.5  }]);
@@ -252,6 +285,9 @@ const Frame = () => {
             setRectWidth(350);
             setRectHeight(51);
             setDefaultImageDimensions({ width: 350, height: 350 });
+            setRectSchoolWidth(0.5);
+            setRectSchoolHeight(0.5);
+            setTextSchoolPositions([{ textSchoolPositionX: 0.5, textSchoolPositionY: 0.5 }]);
           break;
         case FRAMES.ELEVEN:
             setTextPositions([{ textPositionX: 0.2, textPositionY: 219.5  }]);
@@ -259,6 +295,9 @@ const Frame = () => {
             setRectWidth(0.5);
             setRectHeight(0.5);
             setDefaultImageDimensions({ width: 130, height: 130 });
+            setRectSchoolWidth(60);
+            setRectSchoolHeight(20);
+            setTextSchoolPositions([{ textSchoolPositionX: 2, textSchoolPositionY: 19.8 }]);
           break;
         case FRAMES.TWELVE:
             setTextPositions([{ textPositionX: 0.2, textPositionY: 219.5  }]);
@@ -266,11 +305,17 @@ const Frame = () => {
             setRectWidth(0.5);
             setRectHeight(0.5);
             setDefaultImageDimensions({ width: 130, height: 130 });
+            setRectSchoolWidth(60);
+            setRectSchoolHeight(20);
+            setTextSchoolPositions([{ textSchoolPositionX: 2, textSchoolPositionY: 19.8 }]);
           break;
         default:
           setTextPositions([{ textPositionX: 6, textPositionY: 256.5 }])
           setRectWidth(289);
           setRectHeight(60);;
+          setRectSchoolWidth(0.5);
+          setRectSchoolHeight(0.5);
+          setTextSchoolPositions([{ textSchoolPositionX: 0.5, textSchoolPositionY: 0.5 }]);
           break;
       }
     }, [selectedFrame]);
@@ -308,6 +353,9 @@ const Frame = () => {
                 rectHeight={rectHeight} // Pass rect height
                 defaultImageDimensions={defaultImageDimensions}
                 imagePositions={imagePositions}
+                rectSchoolWidth={rectSchoolWidth}
+                rectSchoolHeight={rectSchoolHeight}
+                textSchoolPositions={textSchoolPositions}
               
               />
             )}

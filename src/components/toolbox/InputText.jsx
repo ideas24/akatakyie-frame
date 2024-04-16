@@ -204,7 +204,7 @@ const CustomText = ({
           onChange={(e) => setGuildname(e.target.value)}
         />
 
-        <CustomButtons
+     {/*   <CustomButtons
             fontColors={fontColorGuild}
             setFontColors={setFontColorGuild}
             bgColors={bgColorGuild}
@@ -218,7 +218,7 @@ const CustomText = ({
             FontId="custom-color-font-guild"
             bgId="custom-color-bg-guild"
             style={{ display: checked ? 'block' : 'none' }}
-          /> 
+          />  */}
         </Section2>
       )}
     </Container2>
