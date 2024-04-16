@@ -30,6 +30,8 @@ const CanvasStage = ({
   rectSchoolWidth,
   rectSchoolHeight,
   textSchoolPositions,
+  frameWidth,
+  frameHeight,
 }) => {
   const groupDimensions = {
     height: 372,
@@ -168,8 +170,8 @@ const CanvasStage = ({
 
         <Image
           image={frameImg}
-          width={350}
-          height={350}
+          width={frameWidth || 350}
+          height={frameHeight || 350}
           style={{ zIndex: '100', position: 'absolute' }}
           onMouseDown={checkDeselect}
           onTouchStart={checkDeselect}
