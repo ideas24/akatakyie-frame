@@ -61,7 +61,7 @@ const FormFillup = styled.input`
   border-radius:4px;
   box-sizing: border-box;
   background-color: #333333;
-  color: #666666;
+  color: #ffffff;
   font-size:1rem;
 `;
 
@@ -105,8 +105,29 @@ const CustomText = ({
     'Extɛ - (learning at late hours and dawn) is our thing', 
     'We are Akatakyie - friends became brothers.',
     'I am an Okatakyie - I can do jungle marching',
-    'I am an Okatakyie - Yes i Ana shark too',
-    'We are Akatakyie - of course we are Sharks too'
+    'I am an Okatakyie - Yes i And a shark too',
+    'We are Akatakyie - of course we are Sharks too',
+    'I am proud to be related to an Okatakyie',
+    'I am proud to be married to an Okatakyie', 
+    'Akatakyie affiliate and proud',
+    'Akataslopsa - The big family ',
+    'My Dad is an Okatakyie',
+    'Of course I am an Okatakyie',
+    'My Man is an Okatakyie',
+    'I am an Okatakyie - Daps Trained me',
+    'I am an Okatakyie-  A true Royal',
+    'I am an Okatakyie- Mr Adu Amankwaa trained me',
+    'I am an Okatakyie- Mr Owusu Sekyere trained me',
+    'I am Okatakyie- Mr Owusu Donkor trained me',
+    'I am an Okatakyie- Krigato was my training grounds',
+    'I an an Okatakyie- Burnsen burner flame excites me',
+    'I am an Okatakyie- Orlando was my Sportsmaster',
+    'I am an Okatakyie- Imanus confuses our opposition',
+    'I am an Okatakyie- Imanus Tuas Dominé',
+    'I am an Okatakyie Mr James Berko trained me',
+    'I am an Okatakyie- Sunday Joff was awesome',
+    'I am an Okatakyie- When Buton no dey i Trumpet'
+
   ];
 
   const handleChangeOption = (e) => {
@@ -154,7 +175,7 @@ const CustomText = ({
       )}
 
       <Section1 style={{ paddingTop: '25px' }}>
-    {/* <Heading1>Name</Heading1>
+     <Heading1>Name</Heading1>
       <label htmlFor='material-switch'>
         <Toggle>
           <Switch
@@ -171,7 +192,7 @@ const CustomText = ({
             id='material-switch'
           />
         </Toggle>
-      </label>*/}
+      </label>
     </Section1> 
     {checkedGuild && (
       <Section2 style={{ paddingBottom: '20px' }}>
@@ -179,11 +200,11 @@ const CustomText = ({
           type='text'
           value={guildName}
           name='guildname'
-          placeholder='Your Guild'
+          placeholder=''
           onChange={(e) => setGuildname(e.target.value)}
         />
 
-       {/*   <CustomButtons
+        <CustomButtons
             fontColors={fontColorGuild}
             setFontColors={setFontColorGuild}
             bgColors={bgColorGuild}
@@ -197,7 +218,7 @@ const CustomText = ({
             FontId="custom-color-font-guild"
             bgId="custom-color-bg-guild"
             style={{ display: checked ? 'block' : 'none' }}
-          /> */}
+          /> 
         </Section2>
       )}
     </Container2>
@@ -205,6 +226,7 @@ const CustomText = ({
 };
 
 export const options = [
+
   'I am an Okatakyie - Opoku Ware ba ne me',
   'I am an Okatakyie - Santisberg trained',
   'I am an Okatakyie - I cover / protect my people',
@@ -216,8 +238,29 @@ export const options = [
   'Extɛ - (learning at late hours and dawn) is our thing', 
   'We are Akatakyie - friends became brothers.',
   'I am an Okatakyie - I can do jungle marching',
-  'I am an Okatakyie - Yes i Ana shark too',
-  'We are Akatakyie - of course we are Sharks too'
+  'I am an Okatakyie - Yes i And a shark too',
+  'We are Akatakyie - of course we are Sharks too',
+  'I am proud to be related to an Okatakyie',
+  'I am proud to be married to an Okatakyie', 
+  'Akatakyie affiliate and proud',
+  'Akataslopsa - The big family ',
+  'My Dad is an Okatakyie',
+  'Of course I am an Okatakyie',
+  'My Man is an Okatakyie',
+  'I am an Okatakyie - Daps Trained me',
+  'I am an Okatakyie-  A true Royal',
+  'I am an Okatakyie- Mr Adu Amankwaa trained me',
+  'I am an Okatakyie- Mr Owusu Sekyere trained me',
+  'I am Okatakyie- Mr Owusu Donkor trained me',
+  'I am an Okatakyie- Krigato was my training grounds',
+  'I an an Okatakyie- Burnsen burner flame excites me',
+  'I am an Okatakyie- Orlando was my Sportsmaster',
+  'I am an Okatakyie- Imanus confuses our opposition',
+  'I am an Okatakyie- Imanus Tuas Dominé',
+  'I am an Okatakyie Mr James Berko trained me',
+  'I am an Okatakyie- Sunday Joff was awesome',
+  'I am an Okatakyie- When Buton no dey i Trumpet'
+  
 ];
 
 export default CustomText;
