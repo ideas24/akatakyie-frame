@@ -133,6 +133,7 @@ const CanvasStage = ({
             />
           )}
           {checkedGuild && (
+          <Group  x={222} y={273}>
             <TransformableText
               // eslint-disable-next-line react/no-array-index-key
               name={guildName}
@@ -161,6 +162,7 @@ const CanvasStage = ({
                 setRectangles(rects);
               }}
             />
+          </Group>
           )}
         </Group>
 
