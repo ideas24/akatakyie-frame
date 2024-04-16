@@ -16,8 +16,7 @@ const TransformableText = ({
   fontStyle,
   fontColor,
   alignment,
-  fontSize,
-  frame
+  fontSize
 }) => {
   const [textWidth, setTextWidth] = useState(0);
   const textRef = useRef();

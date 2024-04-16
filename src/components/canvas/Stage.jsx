@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import { Stage, Layer, Image, Group, Rect } from 'react-konva';
 import TransformableText from './TransformableText';
 import TransformableImage from './TransformableImage';
+import { fill } from '@cloudinary/url-gen/actions/resize';
 
 const CanvasStage = ({
   stageRef,
@@ -32,6 +33,7 @@ const CanvasStage = ({
   textSchoolPositions,
   frameWidth,
   frameHeight,
+  rectbgroundColor,
 }) => {
   const groupDimensions = {
     height: 372,
@@ -135,7 +137,7 @@ const CanvasStage = ({
             />
           )}
           {checkedGuild && (
-          <Group  x={222} y={273}>
+          <Group  x={222} y={245.8}>
             <TransformableText
               // eslint-disable-next-line react/no-array-index-key
               name={guildName}
@@ -146,13 +148,14 @@ const CanvasStage = ({
               onMouseDown={checkDeselect}
               onTouchStart={checkDeselect}
               fontStyle='bold'
-              fontSize={12}
+              fontSize={10}
               shapeProps={{
               ...rect[1],
               x: textSchoolPositions[1]?.textSchoolPositionX || 0.5, // Use the text position from props or fallback to default
               y: textSchoolPositions[1]?.textSchoolPositionY || 0.5, 
               width: rectSchoolWidth, // Set the width
-              height: rectSchoolHeight, // Set the height
+              height: rectSchoolHeight, // Set the height  
+              fill: rectbgroundColor || '#F1A80F',     
             }}
               isSelected={rect[1].id === selectedId}
               onSelect={() => {
@@ -177,7 +180,7 @@ const CanvasStage = ({
           onTouchStart={checkDeselect}
           listening={false}
         />
-      </Layer>
+      </Layer>    
     </Stage>
   );
 };

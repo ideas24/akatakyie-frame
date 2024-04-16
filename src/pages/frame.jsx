@@ -128,7 +128,8 @@ const FRAMES = {
   NINE: frameData.frames.NINE,
   TEN: frameData.frames.TEN,
   ELEVEN: frameData.frames.ELEVEN,
-  
+  TWELVE: frameData.frames.TWELVE,
+//  THIRTEEN: frameData.frames.THIRTEEN,
 };
 
 const align = ['center', 'left', 'right'];
@@ -193,13 +194,13 @@ const Frame = () => {
       switch (selectedFrame) {
         case FRAMES.ONE:
           setTextPositions([{ textPositionX: 6, textPositionY: 256.5 }]);
-          setTextSchoolPositions([{ textSchoolPositionX: 0.5, textSchoolPositionY: 0.5 }]);
           setImagePositions([{ imagePositionsX: 89, imagePositionsY: 0 }]);
-          setRectWidth(289);
+          setRectWidth(345);
           setRectHeight(60);
+          setDefaultImageDimensions({ width: 300, height: 300 });
           setRectSchoolWidth(0.5);
           setRectSchoolHeight(0.5);
-          setDefaultImageDimensions({ width: 300, height: 300 });
+          setTextSchoolPositions([{ textSchoolPositionX: 0.5, textSchoolPositionY: 0.5 }]);
           setFrameHeight(350);
           setFrameWidth(350);
           break;
@@ -216,14 +217,14 @@ const Frame = () => {
           setFrameWidth(350);
           break;
         case FRAMES.THREE:
-          setTextPositions([{ textPositionX: 6, textPositionY: 256.5 }]);
-          setImagePositions([{ imagePositionsX: 89, imagePositionsY: 0 }]);
-          setRectWidth(345);
-          setRectHeight(60);
-          setDefaultImageDimensions({ width: 300, height: 300 });
-          setRectSchoolWidth(0.5);
-          setRectSchoolHeight(0.5);
-          setTextSchoolPositions([{ textSchoolPositionX: 0.5, textSchoolPositionY: 0.5 }]);
+          setTextPositions([{ textPositionX: 0.2, textPositionY: 219.5  }]);
+          setImagePositions([{ imagePositionsX: 222, imagePositionsY: 120 }]);
+          setRectWidth(0.5);
+          setRectHeight(0.5);
+          setDefaultImageDimensions({ width: 149, height: 149 });
+          setRectSchoolWidth(60);
+          setRectSchoolHeight(20);
+          setTextSchoolPositions([{ textSchoolPositionX: 2, textSchoolPositionY: 19.8 }]);
           setFrameHeight(350);
           setFrameWidth(350);
           break;
@@ -313,16 +314,40 @@ const Frame = () => {
           break;
         case FRAMES.ELEVEN:
             setTextPositions([{ textPositionX: 0.2, textPositionY: 219.5  }]);
-            setImagePositions([{ imagePositionsX: 220, imagePositionsY: 186 }]);
+            setImagePositions([{ imagePositionsX: 222, imagePositionsY: 120 }]);
             setRectWidth(0.5);
             setRectHeight(0.5);
-            setDefaultImageDimensions({ width: 130, height: 130 });
+            setDefaultImageDimensions({ width: 149, height: 149 });
             setRectSchoolWidth(60);
             setRectSchoolHeight(20);
             setTextSchoolPositions([{ textSchoolPositionX: 2, textSchoolPositionY: 19.8 }]);
             setFrameHeight(350);
             setFrameWidth(350);
           break;
+        case FRAMES.TWELVE:
+            setTextPositions([{ textPositionX: 6, textPositionY: 256.5 }]);
+            setTextSchoolPositions([{ textSchoolPositionX: 0.5, textSchoolPositionY: 0.5 }]);
+            setImagePositions([{ imagePositionsX: 89, imagePositionsY: 0 }]);
+            setRectWidth(289);
+            setRectHeight(60);
+            setRectSchoolWidth(0.5);
+            setRectSchoolHeight(0.5);
+            setDefaultImageDimensions({ width: 300, height: 300 });
+            setFrameHeight(350);
+            setFrameWidth(350);
+          break;
+     {/*    case FRAMES.THIRTEEN:
+            setTextPositions([{ textPositionX: 0.2, textPositionY: 219.5  }]);
+            setImagePositions([{ imagePositionsX: 222, imagePositionsY: 120 }]);
+            setRectWidth(0.5);
+            setRectHeight(0.5);
+            setDefaultImageDimensions({ width: 149, height: 149 });
+            setRectSchoolWidth(50);
+            setRectSchoolHeight(20);
+            setTextSchoolPositions([{ textSchoolPositionX: 1, textSchoolPositionY: 19.8 }]);
+            setFrameHeight(350);
+            setFrameWidth(350);
+      break;   */}
         default:
           setTextPositions([{ textPositionX: 6, textPositionY: 256.5 }])
           setRectWidth(289);
