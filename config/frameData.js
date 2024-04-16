@@ -12,5 +12,6 @@ export default {
     NINE: 'https://ik.imagekit.io/t9mszy7n6/owassax/capfreeorig9c.png',
     TEN: 'https://ik.imagekit.io/t9mszy7n6/owassax/capfreeorig10.png',
     ELEVEN: 'https://ik.imagekit.io/t9mszy7n6/owassax/emptyorig.png',
+    TWELVE: 'https://ik.imagekit.io/t9mszy7n6/owassax/capfreeorig11c.png',
   },
 };

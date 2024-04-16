@@ -128,6 +128,8 @@ const FRAMES = {
   NINE: frameData.frames.NINE,
   TEN: frameData.frames.TEN,
   ELEVEN: frameData.frames.ELEVEN,
+  TWELVE: frameData.frames.TWELVE,
+  
 };
 
 const align = ['center', 'left', 'right'];
@@ -229,8 +231,14 @@ const Frame = () => {
           break;
         case FRAMES.ELEVEN:
             setTextPositions([{ textPositionX: 0.2, textPositionY: 219.5  }]);
-            setRectWidth(350);
-            setRectHeight(51);
+            setRectWidth(0.5);
+            setRectHeight(0.5);
+            setDefaultImageDimensions({ width: 130, height: 130 });
+          break;
+        case FRAMES.TWELVE:
+            setTextPositions([{ textPositionX: 0.2, textPositionY: 219.5  }]);
+            setRectWidth(0.5);
+            setRectHeight(0.5);
             setDefaultImageDimensions({ width: 130, height: 130 });
           break;
         default:
