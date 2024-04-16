@@ -242,7 +242,7 @@ const Frame = () => {
         case FRAMES.FIVE:
             setTextPositions([{ textPositionX: 6, textPositionY: 256.5 }]);
             setImagePositions([{ imagePositionsX: 89, imagePositionsY: 0 }]);
-            setRectWidth(300);
+            setRectWidth(298);
             setRectHeight(60);
             setDefaultImageDimensions({ width: 300, height: 300 });
             setRectSchoolWidth(0.5);
