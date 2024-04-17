@@ -78,6 +78,25 @@ const CanvasStage = ({
     selectShape(null);
   };
 
+  const calculateTextHeight = (text, fontFamily, nameFontsize) => {
+    // Create a temporary canvas element to measure text dimensions
+    const canvas = document.createElement('canvas');
+    const context = canvas.getContext('2d');
+    context.font = `${nameFontsize}px ${fontFamily}`;
+  
+    // Measure the text width
+    const textWidth = context.measureText(text).width;
+  
+    // Calculate the number of lines based on the width of the text and the width of the shape
+    const numLines = Math.ceil(textWidth / (rectSchoolWidth));
+  
+    // Calculate the total height based on font size and line height
+    const totalHeight = numLines * (nameFontsize * 1.2); // Adjust line height as needed
+  
+    return totalHeight;
+  };
+  const nameFontsize = 10;
+
   return (
     <Stage ref={stageRef} width={350} height={350} x={0} style={{ margin: 'auto' }}>
       <Layer>
@@ -154,7 +173,7 @@ const CanvasStage = ({
 
       <Layer> 
         {checkedGuild && (
-          <Group  x={nameRectWidth || 222} y={nameRectHeight ||245.8}>
+          <Group  x={nameRectWidth || 222} y={nameRectHeight || 245.8}>
             <TransformableText
               // eslint-disable-next-line react/no-array-index-key
               name={guildName}
@@ -165,13 +184,13 @@ const CanvasStage = ({
               onMouseDown={checkDeselect}
               onTouchStart={checkDeselect}
               fontStyle='bold'
-              fontSize={10}
+              fontSize={nameFontsize}
               shapeProps={{
               ...rect[1],
               x: textSchoolPositions[1]?.textSchoolPositionX || 0.5, // Use the text position from props or fallback to default
               y: textSchoolPositions[1]?.textSchoolPositionY || 0.5, 
               width: rectSchoolWidth, // Set the width
-              height: rectSchoolHeight, // Set the height 
+              height: calculateTextHeight(guildName, fontFamilyGuild, nameFontsize) ||rectSchoolHeight, // Set the height 
               fill: rectbgcolor,     
             }}
               isSelected={rect[1].id === selectedId}
