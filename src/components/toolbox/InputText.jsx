@@ -140,8 +140,9 @@ const CustomText = ({
     if (initialLoad) {
       handleChange(true);
       setInitialLoad(false);
+      handleChangeGuild(false);
     }
-  }, [initialLoad, handleChange]);
+  }, [initialLoad, handleChange, handleChangeGuild]);
 
   return (
     <Container2>
