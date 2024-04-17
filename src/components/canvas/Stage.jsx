@@ -138,7 +138,22 @@ const CanvasStage = ({
               }}
             />
           )}
-          {checkedGuild && (
+          
+        </Group>
+
+        <Image
+          image={frameImg}
+          width={frameWidth || 350}
+          height={frameHeight || 350}
+          style={{ zIndex: '100', position: 'absolute' }}
+          onMouseDown={checkDeselect}
+          onTouchStart={checkDeselect}
+          listening={false}
+        />
+      </Layer>
+
+      <Layer> 
+        {checkedGuild && (
           <Group  x={nameRectWidth || 222} y={nameRectHeight ||245.8}>
             <TransformableText
               // eslint-disable-next-line react/no-array-index-key
@@ -171,18 +186,7 @@ const CanvasStage = ({
             />
           </Group>
           )}
-        </Group>
-
-        <Image
-          image={frameImg}
-          width={frameWidth || 350}
-          height={frameHeight || 350}
-          style={{ zIndex: '100', position: 'absolute' }}
-          onMouseDown={checkDeselect}
-          onTouchStart={checkDeselect}
-          listening={false}
-        />
-      </Layer>    
+      </Layer>      
     </Stage>
   );
 };
