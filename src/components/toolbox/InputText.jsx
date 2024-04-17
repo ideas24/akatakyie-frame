@@ -126,7 +126,8 @@ const CustomText = ({
     'I am an Okatakyie- Imanus Tuas Dominé',
     'I am an Okatakyie Mr James Berko trained me',
     'I am an Okatakyie- Sunday Joff was awesome',
-    'I am an Okatakyie- When Buton no dey i Trumpet'
+    'I am an Okatakyie- When Buton no dey i Trumpet',
+    'My brother is an Okatakyie'
 
   ];
 
@@ -259,7 +260,8 @@ export const options = [
   'I am an Okatakyie- Imanus Tuas Dominé',
   'I am an Okatakyie Mr James Berko trained me',
   'I am an Okatakyie- Sunday Joff was awesome',
-  'I am an Okatakyie- When Buton no dey i Trumpet'
+  'I am an Okatakyie- When Buton no dey i Trumpet',
+  'My brother is an Okatakyie'
   
 ];
 

@@ -208,7 +208,7 @@ const Frame = () => {
           setFrameWidth(350);
           setNameRectWidth(34);
           setNameRectHeight(170);
-          setRectbgcolor('#14477A');
+          setRectbgcolor('rgba(0,0,0,0)');
           break;
         case FRAMES.TWO:
           setTextPositions([{ textPositionX: 6, textPositionY: 256.5 }]);
@@ -223,7 +223,7 @@ const Frame = () => {
           setFrameWidth(350);
           setNameRectWidth(34);
           setNameRectHeight(170);
-          setRectbgcolor('#14477A');
+          setRectbgcolor('rgba(0,0,0,0)');
           break;
         case FRAMES.THREE:
           setTextPositions([{ textPositionX: 0.2, textPositionY: 219.5  }]);
@@ -238,7 +238,7 @@ const Frame = () => {
           setFrameWidth(350);
           setNameRectWidth(219);
           setNameRectHeight(245.8);
-          setRectbgcolor(svgUrl);
+          setRectbgcolor('rgba(0,0,0,0)');
           break;
         case FRAMES.FOUR:
             setTextPositions([{ textPositionX: 6, textPositionY: 256.5 }]);
@@ -253,7 +253,7 @@ const Frame = () => {
             setFrameWidth(350);
             setNameRectWidth(34);
             setNameRectHeight(170);
-            setRectbgcolor('#14477A');
+            setRectbgcolor('rgba(0,0,0,0)');
           break;
         case FRAMES.FIVE:
             setTextPositions([{ textPositionX: 6, textPositionY: 256.5 }]);
@@ -268,7 +268,7 @@ const Frame = () => {
             setFrameWidth(350);
             setNameRectWidth(34);
             setNameRectHeight(170);
-            setRectbgcolor('#14477A');
+            setRectbgcolor('rgba(0,0,0,0)');
           break;
         case FRAMES.SIX:
             setTextPositions([{ textPositionX: 6, textPositionY: 256.5 }]);
@@ -283,7 +283,7 @@ const Frame = () => {
             setFrameWidth(350);
             setNameRectWidth(34);
             setNameRectHeight(170);
-            setRectbgcolor('#14477A');
+            setRectbgcolor('rgba(0,0,0,0)');
           break;
         case FRAMES.SEVEN:
             setTextPositions([{ textPositionX: 6, textPositionY: 256.5 }]);
@@ -298,7 +298,7 @@ const Frame = () => {
             setFrameWidth(350);
             setNameRectWidth(34);
             setNameRectHeight(170);
-            setRectbgcolor('#14477A');
+            setRectbgcolor('rgba(0,0,0,0)');
           break;
         case FRAMES.EIGHT:
             setTextPositions([{ textPositionX: 6, textPositionY: 256.5 }]);
@@ -313,7 +313,7 @@ const Frame = () => {
             setFrameWidth(350);
             setNameRectWidth(34);
             setNameRectHeight(170);
-            setRectbgcolor('#14477A');
+            setRectbgcolor('rgba(0,0,0,0)');
           break;
         case FRAMES.NINE:
             setTextPositions([{ textPositionX: 0.2, textPositionY: 219.5 }]);
@@ -328,7 +328,7 @@ const Frame = () => {
             setFrameWidth(350);
             setNameRectWidth(34);
             setNameRectHeight(170);
-            setRectbgcolor('#14477A');
+            setRectbgcolor('rgba(0,0,0,0)');
           break;
         case FRAMES.TEN:
             setTextPositions([{ textPositionX: 0.2, textPositionY: 219.5  }]);
@@ -343,7 +343,7 @@ const Frame = () => {
             setFrameWidth(350);
             setNameRectWidth(34);
             setNameRectHeight(170);
-            setRectbgcolor('#14477A');
+            setRectbgcolor('rgba(0,0,0,0)');
           break;
         case FRAMES.ELEVEN:
             setTextPositions([{ textPositionX: 0.2, textPositionY: 219.5  }]);
@@ -358,7 +358,7 @@ const Frame = () => {
             setFrameWidth(350);
             setNameRectWidth(219);
             setNameRectHeight(245.8);
-            setRectbgcolor(svgUrl);
+            setRectbgcolor('rgba(0,0,0,0)');
           break;
         case FRAMES.TWELVE:
             setTextPositions([{ textPositionX: 6, textPositionY: 256.5 }]);
@@ -373,7 +373,7 @@ const Frame = () => {
             setFrameWidth(350);
             setNameRectWidth(34);
             setNameRectHeight(170);
-            setRectbgcolor('#14477A');
+            setRectbgcolor('rgba(0,0,0,0)');
           break;
    {/*     case FRAMES.THIRTEEN:
             setTextPositions([{ textPositionX: 0.2, textPositionY: 219.5  }]);
