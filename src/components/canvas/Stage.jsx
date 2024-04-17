@@ -33,7 +33,9 @@ const CanvasStage = ({
   textSchoolPositions,
   frameWidth,
   frameHeight,
-  rectbgroundColor,
+  nameRectWidth,
+  nameRectHeight,
+  rectbgcolor,
 }) => {
   const groupDimensions = {
     height: 372,
@@ -137,14 +139,14 @@ const CanvasStage = ({
             />
           )}
           {checkedGuild && (
-          <Group  x={222} y={245.8}>
+          <Group  x={nameRectWidth || 222} y={nameRectHeight ||245.8}>
             <TransformableText
               // eslint-disable-next-line react/no-array-index-key
               name={guildName}
               colour='#F1A80F'
               fontFamily={fontFamilyGuild}
               alignment={alignment}
-              fontColor='#F1A80F'
+              fontColor='#eca000'
               onMouseDown={checkDeselect}
               onTouchStart={checkDeselect}
               fontStyle='bold'
@@ -154,8 +156,8 @@ const CanvasStage = ({
               x: textSchoolPositions[1]?.textSchoolPositionX || 0.5, // Use the text position from props or fallback to default
               y: textSchoolPositions[1]?.textSchoolPositionY || 0.5, 
               width: rectSchoolWidth, // Set the width
-              height: rectSchoolHeight, // Set the height  
-              fill: rectbgroundColor || '#F1A80F',     
+              height: rectSchoolHeight, // Set the height 
+              fill: rectbgcolor,     
             }}
               isSelected={rect[1].id === selectedId}
               onSelect={() => {

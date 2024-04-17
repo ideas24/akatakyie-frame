@@ -129,7 +129,7 @@ const FRAMES = {
   TEN: frameData.frames.TEN,
   ELEVEN: frameData.frames.ELEVEN,
   TWELVE: frameData.frames.TWELVE,
-//  THIRTEEN: frameData.frames.THIRTEEN,
+ // THIRTEEN: frameData.frames.THIRTEEN,
 };
 
 const align = ['center', 'left', 'right'];
@@ -170,7 +170,9 @@ const Frame = () => {
   const [rectSchoolHeight, setRectSchoolHeight] = useState(0.5); // Default rect height
   const [frameHeight, setFrameHeight] = useState(350); // Default frame Height
   const [frameWidth, setFrameWidth] = useState(350);  // Default frame Width
-
+  const [nameRectHeight, setNameRectHeight] = useState(245.8); // Default name rect height
+  const [nameRectWidth, setNameRectWidth] = useState(222); // Default name rect width
+  const [rectbgcolor, setRectbgcolor] = useState('#313C5F'); // Default rect bgcolor 
 
   const handleAlignment = () => {
     setAlignment(align[i + 1]);
@@ -189,6 +191,7 @@ const Frame = () => {
   const [frameImg] = useImage(selectedFrame, 'Anonymous');
   const [image] = useImage(uploadedImage, 'Anonymous');
 
+  const svgUrl = '#0D427F';
     // Update text positions based on selected frame
     useEffect(() => {
       switch (selectedFrame) {
@@ -198,11 +201,14 @@ const Frame = () => {
           setRectWidth(345);
           setRectHeight(60);
           setDefaultImageDimensions({ width: 300, height: 300 });
-          setRectSchoolWidth(0.5);
-          setRectSchoolHeight(0.5);
+          setRectSchoolWidth(50);
+          setRectSchoolHeight(20);
           setTextSchoolPositions([{ textSchoolPositionX: 0.5, textSchoolPositionY: 0.5 }]);
           setFrameHeight(350);
           setFrameWidth(350);
+          setNameRectWidth(34);
+          setNameRectHeight(170);
+          setRectbgcolor('#14477A');
           break;
         case FRAMES.TWO:
           setTextPositions([{ textPositionX: 6, textPositionY: 256.5 }]);
@@ -210,11 +216,14 @@ const Frame = () => {
           setRectWidth(289);
           setRectHeight(60);
           setDefaultImageDimensions({ width: 300, height: 300 });
-          setRectSchoolWidth(0.5);
-          setRectSchoolHeight(0.5);
+          setRectSchoolWidth(50);
+          setRectSchoolHeight(20);
           setTextSchoolPositions([{ textSchoolPositionX: 0.5, textSchoolPositionY: 0.5 }]);
           setFrameHeight(350);
           setFrameWidth(350);
+          setNameRectWidth(34);
+          setNameRectHeight(170);
+          setRectbgcolor('#14477A');
           break;
         case FRAMES.THREE:
           setTextPositions([{ textPositionX: 0.2, textPositionY: 219.5  }]);
@@ -227,6 +236,9 @@ const Frame = () => {
           setTextSchoolPositions([{ textSchoolPositionX: 2, textSchoolPositionY: 19.8 }]);
           setFrameHeight(350);
           setFrameWidth(350);
+          setNameRectWidth(222);
+          setNameRectHeight(245.8);
+          setRectbgcolor(svgUrl);
           break;
         case FRAMES.FOUR:
             setTextPositions([{ textPositionX: 6, textPositionY: 256.5 }]);
@@ -234,11 +246,14 @@ const Frame = () => {
             setRectWidth(345);
             setRectHeight(60);
             setDefaultImageDimensions({ width: 300, height: 300 });
-            setRectSchoolWidth(0.5);
-            setRectSchoolHeight(0.5);
+            setRectSchoolWidth(50);
+            setRectSchoolHeight(20);
             setTextSchoolPositions([{ textSchoolPositionX: 0.5, textSchoolPositionY: 0.5 }]);
             setFrameHeight(350);
             setFrameWidth(350);
+            setNameRectWidth(34);
+            setNameRectHeight(170);
+            setRectbgcolor('#14477A');
           break;
         case FRAMES.FIVE:
             setTextPositions([{ textPositionX: 6, textPositionY: 256.5 }]);
@@ -246,11 +261,14 @@ const Frame = () => {
             setRectWidth(298);
             setRectHeight(60);
             setDefaultImageDimensions({ width: 300, height: 300 });
-            setRectSchoolWidth(0.5);
-            setRectSchoolHeight(0.5);
+            setRectSchoolWidth(50);
+            setRectSchoolHeight(20);
             setTextSchoolPositions([{ textSchoolPositionX: 0.5, textSchoolPositionY: 0.5 }]);
             setFrameHeight(350);
             setFrameWidth(350);
+            setNameRectWidth(34);
+            setNameRectHeight(170);
+            setRectbgcolor('#14477A');
           break;
         case FRAMES.SIX:
             setTextPositions([{ textPositionX: 6, textPositionY: 256.5 }]);
@@ -258,11 +276,14 @@ const Frame = () => {
             setRectWidth(300);
             setRectHeight(60);
             setDefaultImageDimensions({ width: 300, height: 300 });
-            setRectSchoolWidth(0.5);
-            setRectSchoolHeight(0.5);
+            setRectSchoolWidth(50);
+            setRectSchoolHeight(20);
             setTextSchoolPositions([{ textSchoolPositionX: 0.5, textSchoolPositionY: 0.5 }]);
             setFrameHeight(350);
             setFrameWidth(350);
+            setNameRectWidth(34);
+            setNameRectHeight(170);
+            setRectbgcolor('#14477A');
           break;
         case FRAMES.SEVEN:
             setTextPositions([{ textPositionX: 6, textPositionY: 256.5 }]);
@@ -270,11 +291,14 @@ const Frame = () => {
             setRectWidth(289);
             setRectHeight(60);
             setDefaultImageDimensions({ width: 300, height: 300 });
-            setRectSchoolWidth(0.5);
-            setRectSchoolHeight(0.5);
+            setRectSchoolWidth(50);
+            setRectSchoolHeight(20);
             setTextSchoolPositions([{ textSchoolPositionX: 0.5, textSchoolPositionY: 0.5 }]);
             setFrameHeight(350);
             setFrameWidth(350);
+            setNameRectWidth(34);
+            setNameRectHeight(170);
+            setRectbgcolor('#14477A');
           break;
         case FRAMES.EIGHT:
             setTextPositions([{ textPositionX: 6, textPositionY: 256.5 }]);
@@ -282,11 +306,14 @@ const Frame = () => {
             setRectWidth(289);
             setRectHeight(60);
             setDefaultImageDimensions({ width: 300, height: 300 });
-            setRectSchoolWidth(0.5);
-            setRectSchoolHeight(0.5);
+            setRectSchoolWidth(50);
+            setRectSchoolHeight(20);
             setTextSchoolPositions([{ textSchoolPositionX: 0.5, textSchoolPositionY: 0.5 }]);
             setFrameHeight(350);
             setFrameWidth(350);
+            setNameRectWidth(34);
+            setNameRectHeight(170);
+            setRectbgcolor('#14477A');
           break;
         case FRAMES.NINE:
             setTextPositions([{ textPositionX: 0.2, textPositionY: 219.5 }]);
@@ -294,11 +321,14 @@ const Frame = () => {
             setRectWidth(350);
             setRectHeight(51);
             setDefaultImageDimensions({ width: 300, height: 300 });
-            setRectSchoolWidth(0.5);
-            setRectSchoolHeight(0.5);
+            setRectSchoolWidth(50);
+            setRectSchoolHeight(20);
             setTextSchoolPositions([{ textSchoolPositionX: 0.5, textSchoolPositionY: 0.5 }]);
             setFrameHeight(350);
             setFrameWidth(350);
+            setNameRectWidth(34);
+            setNameRectHeight(170);
+            setRectbgcolor('#14477A');
           break;
         case FRAMES.TEN:
             setTextPositions([{ textPositionX: 0.2, textPositionY: 219.5  }]);
@@ -306,11 +336,14 @@ const Frame = () => {
             setRectWidth(350);
             setRectHeight(51);
             setDefaultImageDimensions({ width: 300, height: 300 });
-            setRectSchoolWidth(0.5);
-            setRectSchoolHeight(0.5);
+            setRectSchoolWidth(50);
+            setRectSchoolHeight(20);
             setTextSchoolPositions([{ textSchoolPositionX: 0.5, textSchoolPositionY: 0.5 }]);
             setFrameHeight(350);
             setFrameWidth(350);
+            setNameRectWidth(34);
+            setNameRectHeight(170);
+            setRectbgcolor('#14477A');
           break;
         case FRAMES.ELEVEN:
             setTextPositions([{ textPositionX: 0.2, textPositionY: 219.5  }]);
@@ -323,6 +356,9 @@ const Frame = () => {
             setTextSchoolPositions([{ textSchoolPositionX: 2, textSchoolPositionY: 19.8 }]);
             setFrameHeight(350);
             setFrameWidth(350);
+            setNameRectWidth(222);
+            setNameRectHeight(245.8);
+            setRectbgcolor(svgUrl);
           break;
         case FRAMES.TWELVE:
             setTextPositions([{ textPositionX: 6, textPositionY: 256.5 }]);
@@ -330,13 +366,16 @@ const Frame = () => {
             setImagePositions([{ imagePositionsX: 89, imagePositionsY: 0 }]);
             setRectWidth(289);
             setRectHeight(60);
-            setRectSchoolWidth(0.5);
-            setRectSchoolHeight(0.5);
+            setRectSchoolWidth(50);
+            setRectSchoolHeight(20);
             setDefaultImageDimensions({ width: 300, height: 300 });
             setFrameHeight(350);
             setFrameWidth(350);
+            setNameRectWidth(34);
+            setNameRectHeight(170);
+            setRectbgcolor('#14477A');
           break;
-     {/*    case FRAMES.THIRTEEN:
+   {/*     case FRAMES.THIRTEEN:
             setTextPositions([{ textPositionX: 0.2, textPositionY: 219.5  }]);
             setImagePositions([{ imagePositionsX: 222, imagePositionsY: 120 }]);
             setRectWidth(0.5);
@@ -347,7 +386,9 @@ const Frame = () => {
             setTextSchoolPositions([{ textSchoolPositionX: 1, textSchoolPositionY: 19.8 }]);
             setFrameHeight(350);
             setFrameWidth(350);
-      break;   */}
+            setNameRectWidth(29);
+      setNameRectHeight(169); 
+      break;    */}
         default:
           setTextPositions([{ textPositionX: 6, textPositionY: 256.5 }])
           setRectWidth(289);
@@ -357,6 +398,8 @@ const Frame = () => {
           setTextSchoolPositions([{ textSchoolPositionX: 0.5, textSchoolPositionY: 0.5 }]);
           setFrameHeight(350);
           setFrameWidth(350);
+          setNameRectWidth(222);
+          setNameRectHeight(245.8);
           break;
       }
     }, [selectedFrame]);
@@ -399,7 +442,9 @@ const Frame = () => {
                 textSchoolPositions={textSchoolPositions}
                 frameHeight={frameHeight}
                 frameWidth={frameWidth}
-              
+                nameRectWidth={nameRectWidth}
+                nameRectHeight={nameRectHeight}
+                rectbgcolor={rectbgcolor}
               />
             )}
             <CarouselC>
