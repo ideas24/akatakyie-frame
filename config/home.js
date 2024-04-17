@@ -1,7 +1,7 @@
 /* eslint-disable max-len */
 export default {
   logo: {
-    src: 'https://res.cloudinary.com/dy888woul/image/upload/v1712845523/kksmkzwbs1g5oo68hqai.png',
+    src: 'https://ik.imagekit.io/t9mszy7n6/owassax/new-owass-logo.png',
     alt: 'logo',
     web: 'https://www.opokuwareschool.edu.gh/',
   },
