@@ -119,7 +119,7 @@ const SlimText = styled.span`
 const FRAMES = {
   ONE:  frameData.frames.ONE,
   TWO: frameData.frames.TWO,
-  THREE: frameData.frames.THREE,
+//  THREE: frameData.frames.THREE,
   FOUR: frameData.frames.FOUR,
   FIVE: frameData.frames.FIVE,
   SIX: frameData.frames.SIX,
@@ -239,7 +239,7 @@ const Frame = () => {
           setNameRectWidth(219);
           setNameRectHeight(245.8);
           setRectbgcolor('rgba(0,0,0,0)');
-          break;
+      break;  
         case FRAMES.FOUR:
             setTextPositions([{ textPositionX: 6, textPositionY: 256.5 }]);
             setImagePositions([{ imagePositionsX: 89, imagePositionsY: 0 }]);
