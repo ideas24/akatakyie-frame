@@ -88,7 +88,7 @@ const Home = () => {
 
     // Initialize Google Analytics when the component mounts
     useEffect(() => {
-      ReactGA.initialize('G-Z1EB93HGHY');
+      ReactGA.initialize('G-Y3RCH0G481');
       // Track a page view
       ReactGA.pageview(window.location.pathname + window.location.search);
     }, []);
