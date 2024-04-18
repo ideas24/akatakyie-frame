@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
+import ReactGA from 'react-ga';
 
 // Libraries
 import useImage from 'use-image';
@@ -136,6 +137,14 @@ const align = ['center', 'left', 'right'];
 let i = 0;
 
 const Frame = () => {
+
+    // Initialize Google Analytics when the component mounts
+    useEffect(() => {
+      ReactGA.initialize('G-Z1EB93HGHY');
+      // Track a page view
+      ReactGA.pageview(window.location.pathname + window.location.search);
+    }, []);
+
   const [selectedFrame, setSelectedFrame] = useState(FRAMES.ONE);
   const [uploadedImage, setUploadedImage] = useState();
   const [height, setHeight] = useState();

@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import ReactGA from 'react-ga';
 
 // Libraries
 import styled from 'styled-components';
@@ -83,7 +84,15 @@ const SlimText = styled.span`
     `}
 `;
 
-const Home = () => (
+const Home = () => {
+
+    // Initialize Google Analytics when the component mounts
+    useEffect(() => {
+      ReactGA.initialize('G-Z1EB93HGHY');
+      // Track a page view
+      ReactGA.pageview(window.location.pathname + window.location.search);
+    }, []);
+ return (    
   <>
     <Helmet>
       <title>Akatakyieframe | AX Group 25th Anniversary</title>
@@ -106,5 +115,6 @@ const Home = () => (
     </Container>
   </>
 );
+};
 
 export default Home;
